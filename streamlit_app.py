@@ -1,6 +1,5 @@
 import streamlit as st
 import rasterio
-import folium
 import streamlit.components as components
 import matplotlib.pyplot as plt
 import pandas as pd
