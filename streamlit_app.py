@@ -90,13 +90,14 @@ damage_percentages = []
 content_damages = []
 
 for flood_type, path in flood_rasters.items():
+    st.write(flood_type, path)
     flood_types.append(flood_type)
     raster_value = get_raster_value(latitude, longitude, path)
+    st.write(raster_value)
     #content_damage = calculate_content_damage(raster_value)
     ####
     data[flood_type] = raster_value
 
-st.write(data)
 ####************************
 df = pd.DataFrame(data, [1])
 
