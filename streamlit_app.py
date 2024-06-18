@@ -101,7 +101,7 @@ for flood_type, path in flood_rasters.items():
 ####************************
 df = pd.DataFrame(data, [1])
 
-df['Slope'] = df['Slope']*100
+#df['Slope'] = df['Slope']*100
 
 #print(df)
 
@@ -183,7 +183,7 @@ df.loc[(df['Effective Precipitation']>36.2) & (df['Effective Precipitation']<=49
 df.loc[(df['Effective Precipitation']>49.2) & (df['Effective Precipitation']<=58), ['Effective Precipitation Flood Risk Level']] = 'Medium'
 df.loc[(df['Effective Precipitation']>58) & (df['Effective Precipitation']<=65.1), ['Effective Precipitation Flood Risk Level']] = 'High'
 df.loc[df['Effective Precipitation']>65.1, ['Effective Precipitation Flood Risk Level']] = 'Very high'
-
+'''
 #Slope
 df.loc[df['Slope']<=10, ['S_C']] = 5
 df.loc[(df['Slope']>10) & (df['Slope']<=20), ['S_C']] = 4
@@ -239,7 +239,7 @@ df.loc[df['Class']==4, ['Level']] = 'High'
 df.loc[df['Class']==3, ['Level']] = 'Medium'
 df.loc[df['Class']==2, ['Level']] = 'Low'
 df.loc[df['Class']==1, ['Level']] = 'Very low'
-
+'''
 #print(df)
 def generate_on_user_info(row):
     # Prompt template generates the texts
