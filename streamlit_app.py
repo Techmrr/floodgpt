@@ -32,6 +32,8 @@ flood_rasters = {
     
 }
 
+st.write(flood_rasters)
+
 def latlon_to_xy(lat, lon, dataset):
     transformer = Transformer.from_crs("epsg:4326", dataset.crs, always_xy=True)
     x, y = transformer.transform(lon, lat)
@@ -98,7 +100,7 @@ for flood_type, path in flood_rasters.items():
     ####
     data[flood_type] = raster_value
 
-st.write("Prompt is:\n", data)
+
 ####************************
 df = pd.DataFrame(data, [1])
 
