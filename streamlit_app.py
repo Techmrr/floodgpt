@@ -252,10 +252,6 @@ def generate_on_user_info(row):
 
     Property Details:
 
-    Slope Level = {Slope_Level}
-    Slope Flood Risk Level = {Slope_Flood_Risk_Level}
-    Height Above Nearest Drainage Level = {HAND_L}
-    Height Above Nearest Drainage Flood Risk Level = {HAND_FRL}
     Distance to Streams Level = {DS_L}
     Distance to Streams Flood Risk Level = {DS_FRL}
 
@@ -264,7 +260,6 @@ def generate_on_user_info(row):
     Effective Precipitation Level = {EP_L}
     Effective Precipitation Flood Risk Level = {EP_FRL}
 
-    total flood risk level = {total_flood_risk_level}
     You need to write a short essay that includes all the given information somewhere in the essay.
     Do not miss out any.[/INST]"""
 
