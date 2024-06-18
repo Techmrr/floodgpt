@@ -99,7 +99,7 @@ for flood_type, path in flood_rasters.items():
     data[flood_type] = raster_value
 
 ####************************
-df = pd.DataFrame(data, [1])
+df = pd.DataFrame(data, [0])
 
 #df['Slope'] = df['Slope']*100
 
@@ -300,6 +300,6 @@ def generate_on_user_info(row):
                                    )
     return prompt
 
-prompt = generate_on_user_info(row=df.loc[1])
+prompt = generate_on_user_info(row=df.loc[0])
 
 st.write("Prompt is:\n", prompt)
