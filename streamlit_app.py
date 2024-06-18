@@ -111,7 +111,7 @@ for flood_type, path in flood_rasters.items():
     ####
     data[flood_type] = raster_value
 
-#print(data)
+st.write("Prompt is:\n", data)
 ####************************
 df = pd.DataFrame(data, [1])
 
