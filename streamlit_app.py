@@ -78,11 +78,9 @@ col1, col2 = st.columns(2)
 latitude = col1.number_input("Enter latitude:", value=43.550243681701424)
 # Use the second column for longitude input
 longitude = col2.number_input("Enter longitude:", value=-79.58122729155784)
-st.write(latitude, longitude)
+
 ####
 data = {}
-
-floors = ['Basement', 'First Floor', 'Second Floor', 'Third Floor', 'Fourth Floor']
 
 
 #print(flood_rasters.items())
@@ -98,7 +96,7 @@ for flood_type, path in flood_rasters.items():
     ####
     data[flood_type] = raster_value
 
-
+st.write(data)
 ####************************
 df = pd.DataFrame(data, [1])
 
