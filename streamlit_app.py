@@ -316,5 +316,5 @@ def generate_on_user_info(row):
     return prompt
 
 prompt = generate_on_user_info(row=df.loc[1])
-if st.button('Calculate Damage Percentage Across Floors and Content'):
-    st.write("Prompt is:\n", prompt)
+
+st.write("Prompt is:\n", prompt)
