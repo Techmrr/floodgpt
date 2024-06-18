@@ -32,8 +32,6 @@ flood_rasters = {
     
 }
 
-st.write(flood_rasters)
-
 def latlon_to_xy(lat, lon, dataset):
     transformer = Transformer.from_crs("epsg:4326", dataset.crs, always_xy=True)
     x, y = transformer.transform(lon, lat)
@@ -80,7 +78,7 @@ col1, col2 = st.columns(2)
 latitude = col1.number_input("Enter latitude:", value=43.550243681701424)
 # Use the second column for longitude input
 longitude = col2.number_input("Enter longitude:", value=-79.58122729155784)
-
+st.write(latitude, longitude)
 ####
 data = {}
 
