@@ -120,7 +120,7 @@ df['Slope'] = df['Slope']*100
 #print(df)
 
 #DS
-'''
+
 df.loc[df['Distance to Streams']<=100, ['DS_C']] = 5
 df.loc[(df['Distance to Streams']>100) & (df['Distance to Streams']<=300), ['DS_C']] = 4
 df.loc[(df['Distance to Streams']>300) & (df['Distance to Streams']<=500), ['DS_C']] = 3
@@ -138,7 +138,7 @@ df.loc[(df['Distance to Streams']>100) & (df['Distance to Streams']<=300), ['Dis
 df.loc[(df['Distance to Streams']>300) & (df['Distance to Streams']<=500), ['Distance to Streams Flodd Risk Level']] = 'Medium'
 df.loc[(df['Distance to Streams']>500) & (df['Distance to Streams']<=1000), ['Distance to Streams Flodd Risk Level']] = 'Low'
 df.loc[df['Distance to Streams']>1000, ['Distance to Streams Flood Risk Level']] = 'Very low'
-'''
+
 #CN
 '''
 df.loc[df['Curve Number']==94, ['CN_C']] = 5
