@@ -13,6 +13,7 @@ body {
 }
 </style>
 """
+'''
 st.markdown(css, unsafe_allow_html=True)
 # Customize the sidebar
 markdown = """
@@ -27,7 +28,7 @@ logo2 = "https://www.yorku.ca/cifal/wp-content/uploads/sites/437/2021/12/team.jp
 st.sidebar.image(logo2)
 # Customize page title
 st.title("Multi-Floor Flood Damage Assessment App- Golden Horseshoe (Ontario)")
-
+'''
 # Flood_rasters dictionary
 flood_rasters = {
     "Flood 25": "https://drive.google.com/uc?export=download&id=1AbG8G1QfX17Htfl1DnfmlD3MsGa45GzE",
