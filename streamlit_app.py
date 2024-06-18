@@ -13,22 +13,7 @@ body {
 }
 </style>
 """
-'''
-st.markdown(css, unsafe_allow_html=True)
-# Customize the sidebar
-markdown = """
-This application uses www.floodmapviewer.com raster data to calculate potential flooding damage to properties.
-"""
-#st.markdown(markdown)
-st.sidebar.title("About")
-st.sidebar.info(markdown)
-logo1 = "https://adersim.info.yorku.ca/files/2024/05/adersim.jpg"
-st.sidebar.image(logo1)
-logo2 = "https://www.yorku.ca/cifal/wp-content/uploads/sites/437/2021/12/team.jpg"
-st.sidebar.image(logo2)
-# Customize page title
-st.title("Multi-Floor Flood Damage Assessment App- Golden Horseshoe (Ontario)")
-'''
+
 # Flood_rasters dictionary
 flood_rasters = {
     "Flood 25": "https://drive.google.com/uc?export=download&id=1AbG8G1QfX17Htfl1DnfmlD3MsGa45GzE",
