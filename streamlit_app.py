@@ -93,6 +93,23 @@ latitude = col1.number_input("Enter latitude:", value=43.550243681701424)
 # Use the second column for longitude input
 longitude = col2.number_input("Enter longitude:", value=-79.58122729155784)
 
+# Sidebar setup
+st.sidebar.title("Basemap Configuration")
+options = list(leafmap.basemaps.keys())
+selected_basemap = st.sidebar.selectbox("Select a basemap:", options, index=options.index("SATELLITE"))
+# User input for latitude and longitude
+#latitude = st.sidebar.number_input("Enter latitude:", value=43.651070)  # Default values for demonstration
+#longitude = st.sidebar.number_input("Enter longitude:", value=-79.347015)
+#st.title("Interactive Map Viewer")
+# Map initialization with user-selected basemap
+m = leafmap.Map(center=(latitude, longitude), zoom_start=15)
+# Adding the selected basemap
+m.add_basemap(selected_basemap)
+# Adding a marker for the given location
+m.add_marker(location=(latitude, longitude), popup='Your Location')
+# Display the map
+m.to_streamlit(height=700)
+
 ####
 data = {}
 
