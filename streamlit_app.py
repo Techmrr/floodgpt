@@ -269,10 +269,12 @@ def generate_on_user_info(row):
     Do not miss out any.[/INST]"""
 
     #user_id = row['ID Number']
+    '''
     Slope_Level = row['Slope Level']
     Slope_Flood_Risk_Level = row['Slope Flood Risk Level']
     HAND_L = row['Height Above Nearest Drainage Level']
     HAND_FRL = row['Height Above Nearest Drainage Flood Risk Level']
+    '''
     DS_L = row['Distance to Streams Level']
     DS_FRL = row['Distance to Streams Flood Risk Level']
     #CN_L = row['Curve Number Level']
@@ -283,20 +285,15 @@ def generate_on_user_info(row):
     EP_FRL = row['Effective Precipitation Flood Risk Level']
     #Floodplain = row['Floodplain']
     #FP_FRL = row['Floodplain Flood Risk Level']
-    total_flood_risk_level = row['Level']
+    #total_flood_risk_level = row['Level']
 
     # Fill in prompt with PII
-    prompt = prompt_template.format(Slope_Level=Slope_Level,
-                                    Slope_Flood_Risk_Level=Slope_Flood_Risk_Level,
-                                    HAND_L=HAND_L,
-                                    HAND_FRL=HAND_FRL,
-                                    DS_L=DS_L,
+    prompt = prompt_template.format(DS_L=DS_L,
                                     DS_FRL=DS_FRL,
                                     TP_L=TP_L,
                                     TP_FRL=TP_FRL,
                                     EP_L=EP_L,
                                     EP_FRL=EP_FRL,
-                                    total_flood_risk_level=total_flood_risk_level
                                    )
     return prompt
 
