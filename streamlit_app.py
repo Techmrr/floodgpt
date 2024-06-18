@@ -1,7 +1,6 @@
 import streamlit as st
 import rasterio
 import streamlit.components as components
-import matplotlib.pyplot as plt
 import pandas as pd
 
 st.set_page_config(layout="wide")
