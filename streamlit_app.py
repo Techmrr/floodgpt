@@ -1,5 +1,4 @@
 import streamlit as st
-import leafmap.foliumap as leafmap
 import rasterio
 from pyproj import Proj, Transformer
 import folium
